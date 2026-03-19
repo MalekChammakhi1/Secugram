@@ -11,21 +11,20 @@ Aucune image n'est stockée en clair. Les données en base sont illisibles.
 ## Structure du projet
 
 ```
-
-├──   Secugram/                    BACKEND SECUGRAM (Stockage pur)
-│     ├── README.md                          → Documentation
-│     ├── requirements.txt                   → Dépendances Python
-│     │
-│     └── app/
-│        ├── main.py                        → Point d'entrée
-│        │
-│        ├── api/
-│        │   └── routes.py
-│        │
-│        │
-│        └── database/                        → Persistence des données
-│            ├── database.py
-│            └── models.py 
+Secugram/                           BACKEND SECUGRAM (Stockage pur)
+     ├── README.md                          → Documentation
+     ├── requirements.txt                   → Dépendances Python
+     │
+     └── app/
+        ├── main.py                         → Point d'entrée
+        │
+        ├── api/
+        │   └── routes.py
+        │
+        │
+        └── database/                        → Persistence des données
+            ├── database.py
+            └── models.py 
 ```
 
 ---
@@ -42,7 +41,7 @@ Aucune image n'est stockée en clair. Les données en base sont illisibles.
 ### 1. Cloner et créer l'environnement virtuel
 
 ```bash
-git clone <repo>
+git clone https://github.com/MalekChammakhi1/Secugram.git
 cd secugram
 
 python3 -m venv venv
