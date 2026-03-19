@@ -113,7 +113,3 @@ L'API est disponible sur `http://localhost:8000`
 La documentation interactive Swagger sur `http://localhost:8000/docs`
 
 ---
-| Chiffrement | Fernet (AES-128-CBC + HMAC-SHA256) |
-| Clé | Stockée uniquement dans `.env`, jamais en base |
-| Données en base | Binaire opaque — illisible sans la clé |
-| Transport | Utiliser HTTPS en production (nginx / Caddy devant uvicorn) |
