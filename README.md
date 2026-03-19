@@ -36,7 +36,7 @@ fastapi_project/
 
 ```bash
 git clone <repo>
-cd fastapi_project
+cd secugram
 
 python3 -m venv venv
 source venv/bin/activate        # Windows : venv\Scripts\activate
