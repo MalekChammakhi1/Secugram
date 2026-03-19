@@ -11,14 +11,21 @@ Aucune image n'est stockée en clair. Les données en base sont illisibles.
 ## Structure du projet
 
 ```
-fastapi_project/
-├── main.py           # Point d'entrée FastAPI
-├── routes.py         # Unique route POST /images/upload
-├── database.py       # Connexion MongoDB async (Motor)
-├── models.py         # Schémas Pydantic (ImageOut)
-├── security.py       # Chiffrement Fernet (encrypt_bytes / decrypt_bytes)
-├── requirements.txt  # Dépendances Python
-└── .env              # Variables d'environnement (ne pas committer)
+
+├──   Secugram/                    BACKEND SECUGRAM (Stockage pur)
+│     ├── README.md                          → Documentation
+│     ├── requirements.txt                   → Dépendances Python
+│     │
+│     └── app/
+│        ├── main.py                        → Point d'entrée
+│        │
+│        ├── api/
+│        │   └── routes.py
+│        │
+│        │
+│        └── database/                        → Persistence des données
+│            ├── database.py
+│            └── models.py 
 ```
 
 ---
