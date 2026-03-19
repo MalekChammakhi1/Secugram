@@ -4,8 +4,7 @@ from bson import ObjectId
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
  
 from database.database import get_database
-from database.models import UserCreate, UserOut, ImageOut
-from security import hash_password, encrypt_bytes
+from database.models import  ImageOut
  
 ALLOWED_MIME = {"image/jpeg", "image/png", "image/gif", "image/webp"}
 MAX_SIZE_BYTES = 10 * 1024 * 1024
@@ -42,14 +41,12 @@ async def upload_image(
     if not owner:
         raise HTTPException(status_code=404, detail="Utilisateur introuvable")
  
-    encrypted_bytes: bytes = encrypt_bytes(raw_bytes)
  
     now = datetime.now(timezone.utc)
     image_doc = {
         "filename":       file.filename,
         "content_type":   file.content_type,
         "size_bytes":     len(raw_bytes),
-        "encrypted_data": encrypted_bytes,
         "owner_id":       owner_oid,
         "uploaded_at":    now,
     }
