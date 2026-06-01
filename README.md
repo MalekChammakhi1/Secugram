@@ -2,7 +2,7 @@
 
 ## Rôle de ce serveur
 
-Ce serveur est un **pur service de stockage**. Son unique responsabilité est de recevoir une image envoyée par un **tiers de confiance** bien chiffrée puis de la **persister dans MongoDB**.
+Ce serveur est un **pur service de stockage**. Son unique responsabilité est de recevoir une image envoyée par un **tiers de confiance** à travers de l'Api bien chiffrée puis de la **persister dans MongoDB**.
 
 Aucune image n'est stockée en clair. Les données en base sont illisibles.
 
