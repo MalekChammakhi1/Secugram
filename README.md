@@ -112,7 +112,8 @@ MONGO_URI=mongodb+srv://<user>:<password>@cluster0.xxxxx.mongodb.net/?retryWrite
 ## Lancer le serveur
 
 ```bash
-uvicorn app.main:app --reload
+cd app
+uvicorn main:app --reload
 ```
 
 L'API est disponible sur `http://localhost:8000`
